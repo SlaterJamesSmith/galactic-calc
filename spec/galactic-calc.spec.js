@@ -1,4 +1,4 @@
-// import { calc } from "../src/galactic-calc.js";
+import { calc } from "../src/galactic-calc.js";
 
 describe ("Birthday", function() {
   // it('should be a "Wed Mar 13 2019"', function(){
@@ -8,23 +8,23 @@ describe ("Birthday", function() {
   // });
 
   it('should return user’s current age', function(){
-    class Birthday {
-      constructor (year, month, day) {
-        this.year = year;
-        this.month = month;
-        this.day = day;
-      }
+    // class Birthday {
+    //   constructor (year, month, day) {
+    //     this.year = year;
+    //     this.month = month;
+    //     this.day = day;
+    //   }
+    //
+    //   earthAge() {
+    //     let date = new Date;
+    //     return date.getFullYear() - 1990;
+    //   }
+    //
+    // }
 
-      earthAge() {
-        let date = new Date;
-        return date.getFullYear() - 1990;
-      }
-
-    }
-
-    let earth = new Birthday(1989, 10, 22);
-
-    expect(earth.earthAge()).toEqual(29);
+    // let earth = new Birthday(1989, 10, 22);
+    const output = calc(1989, 10, 22);
+    expect(output).toEqual(29);
   });
 
 //   it('Application returns user’s current age', function(){
