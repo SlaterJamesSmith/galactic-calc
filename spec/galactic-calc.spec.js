@@ -8,22 +8,7 @@ describe ("Birthday", function() {
   // });
 
   it('should return user’s current age', function(){
-    // class Birthday {
-    //   constructor (year, month, day) {
-    //     this.year = year;
-    //     this.month = month;
-    //     this.day = day;
-    //   }
-    //
-    //   earthAge() {
-    //     let date = new Date;
-    //     return date.getFullYear() - 1990;
-    //   }
-    //
-    // }
-
-    // let earth = new Birthday(1989, 10, 22);
-    const output = calc(1989, 10, 22);
+    const output = calc(1989, 3, 16);
     expect(output).toEqual(29);
   });
 
