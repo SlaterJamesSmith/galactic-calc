@@ -8,7 +8,7 @@ describe ("Birthday", function() {
   // });
 
   it('should return user’s current age', function(){
-    const output = calc(1989, 3, 16);
+    const output = calc(1989, 3, 15);
     expect(output).toEqual(29);
   });
 
