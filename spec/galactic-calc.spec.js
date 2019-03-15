@@ -10,23 +10,22 @@ describe ("Birthday", function() {
   it('Application returns user’s current age', function(){
     const birthday = new Birthday;
     const input = 29;
-    // const input = (2019, 2, 13);
     expect(input).toEqual("29");
   });
 
   it('should return current age divided by .24', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(29 / .24);
   });
 
   it('should return current age divided by .62', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(29 / .62);
   });
 
   it('should return current age divided by 1.88', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(29 / 1.88);
   });
 
   it('should return current age divided by 11.86', function(){
@@ -36,22 +35,22 @@ describe ("Birthday", function() {
 
   it('should return user’s life expectancy divided by .24', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(75 / .24);
   });
 
   it('should return user’s life expectancy divided by .62', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(75 / .62);
   });
 
   it('should return user’s life expectancy divided by 1.88', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(75 / 1.88);
   });
 
   it('should return user’s life expectancy divided by 11.86', function(){
     // const input = (parseInt("asfaf"));
-    // expect(input).toEqual(NaN);
+    expect(input).toEqual(75 / 11.86);
   });
 
 });
