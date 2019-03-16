@@ -1,28 +1,27 @@
-// export function dayName(year, month, day) {
-//
-//   const date = new Date(year, month, day);
-//
-//   const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-//   const newDayTwo = weekDays[date.getDay()];
-//   return newDayTwo;
-// }
+export function calcEarth(bYear, bMonth, bDay) {
+  const earth = new Birthday(bYear, bMonth, bDay);
+  return earth.earthAge();
+}
 
+export function calcMerc(dYear, dMonth, dDay) {
+  const merc = new Birthday(dYear, dMonth, dDay);
+  return merc.mercuryAge();
+}
 
-// export function leapYear(year) {
-//   if (year % 400 === 0) {
-//     return true;
-//   }
-//   else if (year % 4 === 0 && year % 100 !== 0) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+export function calcVen(dYear, dMonth, dDay) {
+  const ven = new Birthday(dYear, dMonth, dDay);
+  return ven.venusAge();
+}
 
-// export function gross {
-//   let date = new Date;
-//   let birthday = new Date(year, month, day);
-// }
+export function calcMars(dYear, dMonth, dDay) {
+  const mars = new Birthday(dYear, dMonth, dDay);
+  return mars.marsAge();
+}
+
+export function calcJup(Year, Month, Day) {
+  const jupiter = new Birthday(Year, Month, Day);
+  return jupiter.jupiterAge();
+}
 
 
 class Birthday {
@@ -49,16 +48,41 @@ class Birthday {
       } else {
         return userYear;
       }
-
-
     }
-
   }
 
-}
+  trueAge() {
+    const date = new Date;
+    const userYear = ((date.getFullYear() - 1) - this.year);
+    const userMonth = ((12 + date.getMonth() - this.month)/12);
+    const userDay = this.day/365.25 - date.getDate()/365.25;
+    const decAge = userYear + userMonth + userDay;
+    return decAge;
+  }
 
-export function calc(bYear, bMonth, bDay) {
-  const earth = new Birthday(bYear, bMonth, bDay);
-  return earth.earthAge();
+  mercuryAge() {
+    const age = this.trueAge()
+    // const date = new Date;
+    // const userYear = ((date.getFullYear() - 1) - this.year);
+    // const userMonth = ((12 + date.getMonth() - this.month)/12);
+    // const userDay = this.day/365.25 - date.getDate()/365.25;
+    // const decAge = userYear + userMonth + userDay;
+    return Math.floor(age/.24);
+  }
+  venusAge() {
+    const age = this.trueAge()
+    return Math.floor(age/.62);
+  }
+  marsAge() {
+    const age = this.trueAge()
+    return Math.floor(age/1.88);
+  }
+  jupiterAge() {
+    const age = this.trueAge()
+    return Math.floor(age/11.86);
+  }
+
+
+
 
 }
