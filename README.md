@@ -17,6 +17,8 @@
 | Application returns user’s current age in Mars years | User's birthday | current age divided by 1.88 |
 | Application returns user’s current age in Jupiter years | User's birthday | current age divided by 11.86 |
 | Application returns user’s life expectancy for all planets | User's birthday & life expectancy on Earth for user’s particular demographic | Current life expectancy divided by .24,  .62, 1.88, and 11.86 for Mercury, Venus, Mars, and Jupiter respectively. |
+| Application returns the difference between user age and life expectancy for all planets (if positive) | (birth year, month, day, earth life expectancy) 2019 10 22 | 45, 190, 73, 24, 4 |
+| Application returns the difference between user age and life expectancy for all planets and converts them to positive numbers if difference is negative | (birth year, month, day, earth life expectancy) 2094 10 22 | 45, 190, 73, 24, 4 |
 
 <!-- ### Images
 
