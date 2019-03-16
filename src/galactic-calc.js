@@ -23,6 +23,11 @@ export function calcJup(Year, Month, Day) {
   return jupiter.jupiterAge();
 }
 
+export function calcEx(year, month, day, expectancy) {
+  const expect = new Birthday(year, month, day);
+  return expect.lifeEx(expectancy);
+}
+
 
 class Birthday {
   constructor (year, month, day) {
@@ -80,6 +85,25 @@ class Birthday {
   jupiterAge() {
     const age = this.trueAge()
     return Math.floor(age/11.86);
+  }
+
+  lifeEx(lifeEx) {
+    const age = this.trueAge()
+    const earthEx = Math.floor(lifeEx - this.trueAge());
+    const mercEx = Math.floor(lifeEx/.24 - this.mercuryAge());
+    const venEx = Math.floor(lifeEx/.62 - this.venusAge());
+    const marsEx = Math.floor(lifeEx/1.88 - this.marsAge());
+    const jupEx = Math.floor(lifeEx/11.86 - this.jupiterAge());
+    if (lifeEx < age) {
+
+      return `You have exceeded your life expectancy by ${earthEx * -1} Earth years, ${mercEx * -1} Mercury years, ${venEx * -1} Venus years, ${marsEx * -1} Mars years, and ${jupEx * -1} Jupiter years...`
+
+    } else {
+
+    return `You have ${earthEx} years left to live on Earth, ${mercEx} years left to live on Mercury, ${venEx} years left to live on Venus, ${marsEx} years left to live on Mars, and ${jupEx} years left to live on Jupiter...`
+    }
+
+
   }
 
 

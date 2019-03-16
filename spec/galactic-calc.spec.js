@@ -3,6 +3,7 @@ import { calcMerc } from "../src/galactic-calc.js";
 import { calcVen } from "../src/galactic-calc.js";
 import { calcMars } from "../src/galactic-calc.js";
 import { calcJup } from "../src/galactic-calc.js";
+import { calcEx } from "../src/galactic-calc.js";
 
 describe ("Birthday", function() {
 
@@ -31,10 +32,15 @@ describe ("Birthday", function() {
     expect(output).toEqual(2);
   });
 
-//   it('should return current age divided by 11.86', function(){
-//     // const input = (parseInt("asfaf"));
-//     // expect(input).toEqual(NaN);
-//   });
+  it('should return difference in age expectency and age for all planets', function(){
+    const output = calcEx(1989, 10, 22, 75);
+    expect(output).toEqual('You have 45 years left to live on Earth, 190 years left to live on Mercury, 73 years left to live on Venus, 24 years left to live on Mars, and 4 years left to live on Jupiter...');
+  });
+
+  it('should return exceeded age expectency for all planets', function(){
+    const output = calcEx(1899, 10, 22, 75);
+    expect(output).toEqual('You have exceeded your life expectancy by 45 Earth years, 185 Mercury years, 72 Venus years, 24 Mars years, and 4 Jupiter years...');
+  });
 //
 //   it('should return user’s life expectancy divided by .24', function(){
 //     // const input = (parseInt("asfaf"));
