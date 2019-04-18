@@ -47,5 +47,5 @@ This application still needs work before it can be considered complete. It still
 
 ### License
 
-*{This software is licensed under the MIT license}*
+*This software is licensed under the MIT license*
 Copyright (c) 2019 **_Slater Smith_**
